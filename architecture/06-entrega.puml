@@ -1,0 +1,46 @@
+@startuml entrega-completa
+!theme cerulean-outline
+skinparam backgroundColor #0a192f
+skinparam defaultFontColor #ffffff
+skinparam RectangleBackgroundColor #1a365d
+skinparam RectangleBorderColor #d4af37
+
+title <font color="#d4af37" size="24">Entrega Completa</font>
+
+rectangle "O QUE EU ENTREGO" {
+
+  rectangle "CODIGO" #0a192f {
+    (Frontend React/Next.js)
+    (Backend Node.js/NestJS)
+    (Banco de Dados)
+    (Testes)
+  }
+
+  rectangle "INFRAESTRUTURA" #0a192f {
+    (Servidor VPS)
+    (Docker Containers)
+    (SSL/HTTPS)
+    (CDN Cloudflare)
+  }
+
+  rectangle "OPERACAO" #0a192f {
+    (Dominio Configurado)
+    (Email Corporativo)
+    (Backups Automaticos)
+    (Monitoramento 24/7)
+  }
+
+  rectangle "DOCUMENTACAO" #0a192f {
+    (README Tecnico)
+    (API Docs)
+    (Deploy Guide)
+    (Arquitetura)
+  }
+}
+
+note bottom
+  <font color="#d4af37" size="16">"Eu nao entrego projeto.</font>
+  <font color="#d4af37" size="16">Eu entrego solucao funcionando."</font>
+end note
+
+@enduml

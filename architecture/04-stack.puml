@@ -1,0 +1,50 @@
+@startuml stack-completa
+!theme cerulean-outline
+skinparam backgroundColor #0a192f
+skinparam defaultFontColor #ffffff
+skinparam PackageBackgroundColor #1a365d
+skinparam PackageBorderColor #d4af37
+skinparam ComponentBackgroundColor #0a192f
+skinparam ComponentBorderColor #d4af37
+
+title <font color="#d4af37" size="24">Stack Completa</font>
+
+package "FRONTEND" {
+  [React.js]
+  [Next.js]
+  [TypeScript]
+  [Tailwind CSS]
+  [Framer]
+}
+
+package "BACKEND" {
+  [Node.js]
+  [NestJS]
+  [Express]
+  [GraphQL]
+  [REST APIs]
+}
+
+package "DATABASE" {
+  [PostgreSQL]
+  [MongoDB]
+  [Redis]
+  [Prisma ORM]
+}
+
+package "INFRA" {
+  [Docker]
+  [AWS]
+  [VPS]
+  [Cloudflare]
+  [CI/CD]
+}
+
+package "AI & PAYMENTS" {
+  [OpenAI API]
+  [Claude API]
+  [PIX Integration]
+  [Banking APIs]
+}
+
+@enduml

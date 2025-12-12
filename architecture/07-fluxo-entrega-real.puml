@@ -1,0 +1,109 @@
+@startuml fluxo-entrega-real
+skinparam backgroundColor #0a192f
+skinparam defaultFontColor #ffffff
+skinparam ArrowColor #d4af37
+skinparam RectangleBackgroundColor #1a365d
+skinparam RectangleBorderColor #d4af37
+skinparam DatabaseBackgroundColor #1a365d
+skinparam DatabaseBorderColor #d4af37
+skinparam CloudBackgroundColor #1a365d
+skinparam CloudBorderColor #d4af37
+skinparam ComponentBackgroundColor #1a365d
+skinparam ComponentBorderColor #d4af37
+skinparam NoteBackgroundColor #0a192f
+skinparam NoteBorderColor #d4af37
+
+title <font color="#d4af37" size="28">Arquitetura de Entrega Real</font>
+
+actor "Cliente" as cliente #d4af37
+actor "Usuario Final" as usuario #ffffff
+
+rectangle "DESCOBERTA" as discovery #0a192f {
+  (Problema Identificado) as prob
+  (Requisitos Mapeados) as req
+  (Arquitetura Desenhada) as arq
+}
+
+rectangle "DESENVOLVIMENTO" as dev #0a192f {
+  package "Frontend" as fe {
+    [Next.js App] as nextapp
+    [React Components] as react
+    [Tailwind Styles] as tw
+  }
+
+  package "Backend" as be {
+    [NestJS API] as nest
+    [Auth Module] as auth
+    [Business Logic] as logic
+  }
+
+  database "Data Layer" as db {
+    [PostgreSQL] as pg
+    [Redis Cache] as redis
+    [Prisma ORM] as prisma
+  }
+}
+
+cloud "INFRAESTRUTURA" as infra {
+  [VPS Ubuntu] as vps
+  [Docker Compose] as docker
+  [Nginx Proxy] as nginx
+  [Certbot SSL] as ssl
+}
+
+cloud "CDN & DNS" as cdn {
+  [Cloudflare] as cf
+  [DNS Records] as dns
+  [DDoS Protection] as ddos
+  [Email Routing] as email
+}
+
+rectangle "ENTREGA" as delivery #d4af37 {
+  (Sistema Online) as online
+  (Documentacao) as docs
+  (Treinamento) as train
+}
+
+' CONEXOES COM LABELS
+cliente --> prob : <font color="#d4af37">Define necessidade</font>
+prob --> req : <font color="#ffffff">Analise</font>
+req --> arq : <font color="#ffffff">Desenho</font>
+
+arq --> nextapp : <font color="#d4af37">Implementa Frontend</font>
+arq --> nest : <font color="#d4af37">Implementa Backend</font>
+arq --> pg : <font color="#d4af37">Modela Dados</font>
+
+nextapp --> react
+react --> tw
+nest --> auth
+nest --> logic
+logic --> prisma
+prisma --> pg
+prisma --> redis
+
+nextapp --> nginx : <font color="#ffffff">Build</font>
+nest --> docker : <font color="#ffffff">Container</font>
+docker --> vps : <font color="#d4af37">Deploy</font>
+nginx --> ssl : <font color="#ffffff">HTTPS</font>
+vps --> cf : <font color="#d4af37">Proxy</font>
+cf --> dns
+cf --> ddos
+cf --> email
+
+dns --> online : <font color="#d4af37">Go Live</font>
+online --> docs
+online --> train
+train --> usuario : <font color="#d4af37">Acesso</font>
+
+note right of delivery
+  <font color="#d4af37" size="14">TEMPO MEDIO: 2-4 semanas</font>
+  <font color="#ffffff" size="12">Do zero ao ar</font>
+  <font color="#ffffff" size="12">Sem intermediarios</font>
+end note
+
+note bottom of dev
+  <font color="#d4af37" size="12">TypeScript em tudo</font>
+  <font color="#ffffff" size="10">Type-safe end-to-end</font>
+end note
+
+@enduml
