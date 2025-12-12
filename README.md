@@ -332,19 +332,19 @@ Stack moderna otimizada para produtividade, manutencao e performance em escala.
 <td><a href="https://prophetique.com.br"><strong>prophetique.com.br</strong></a></td>
 <td>Consultoria Tech</td>
 <td><code>SEO 100/100</code> <code>Performance</code></td>
-<td><img src="https://img.shields.io/badge/●-Online-00875f?style=flat-square&labelColor=0a192f"/></td>
+<td><a href="https://prophetique.com.br" target="_blank"><img src="https://img.shields.io/badge/●_Visitar-Online-00875f?style=flat-square&labelColor=0a192f"/></a></td>
 </tr>
 <tr>
 <td><a href="https://bemficamarchado.com"><strong>bemficamarchado.com</strong></a></td>
 <td>Export Internacional</td>
 <td><code>8 idiomas</code> <code>RTL</code> <code>Multi-moeda</code></td>
-<td><img src="https://img.shields.io/badge/●-Online-00875f?style=flat-square&labelColor=0a192f"/></td>
+<td><a href="https://bemficamarchado.com" target="_blank"><img src="https://img.shields.io/badge/●_Visitar-Online-00875f?style=flat-square&labelColor=0a192f"/></a></td>
 </tr>
 <tr>
 <td><a href="https://reflorestamentobrasil.com.br"><strong>reflorestamentobrasil.com.br</strong></a></td>
 <td>E-commerce Ambiental</td>
 <td><code>WhatsApp API</code> <code>Orcamentos</code></td>
-<td><img src="https://img.shields.io/badge/●-Online-00875f?style=flat-square&labelColor=0a192f"/></td>
+<td><a href="https://reflorestamentobrasil.com.br" target="_blank"><img src="https://img.shields.io/badge/●_Visitar-Online-00875f?style=flat-square&labelColor=0a192f"/></a></td>
 </tr>
 <tr>
 <td><strong>Enterprise Systems</strong></td>
