@@ -2,7 +2,7 @@
 
 <br>
 
-# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Gear.png" alt="Gear" width="32" height="32" /> Metodologia de Desenvolvimento
+# ⚙️ Metodologia de Desenvolvimento
 
 <br>
 
@@ -67,7 +67,7 @@
 
 <br>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Classical%20Building.png" alt="Building" width="25" height="25" /> Arquitetura
+## 🏛️ Arquitetura
 
 <a name="arquitetura"></a>
 
@@ -121,7 +121,7 @@ Cada projeto comeca com a definicao clara das camadas, responsabilidades e fluxo
 
 <br>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" /> Processo
+## 🚀 Processo
 
 <a name="processo"></a>
 
@@ -194,7 +194,7 @@ Semana 4 → Segunda feature
 
 <br>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" alt="Tools" width="25" height="25" /> Stack
+## 🛠️ Stack
 
 <a name="stack"></a>
 
@@ -263,7 +263,7 @@ Stack moderna otimizada para produtividade, manutencao e performance em escala.
 
 <br>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Package.png" alt="Package" width="25" height="25" /> Entrega
+## 📦 Entrega
 
 > Nao entrego codigo. Entrego solucao funcionando.
 
@@ -304,7 +304,7 @@ Stack moderna otimizada para produtividade, manutencao e performance em escala.
 
 <br>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Trophy.png" alt="Trophy" width="25" height="25" /> Projetos
+## 🏆 Projetos
 
 <a name="projetos"></a>
 
@@ -376,7 +376,7 @@ Stack moderna otimizada para produtividade, manutencao e performance em escala.
 
 <br>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Open%20File%20Folder.png" alt="Folder" width="25" height="25" /> Estrutura
+## 📂 Estrutura
 
 ```
 metodologia-dev/
@@ -411,7 +411,7 @@ metodologia-dev/
 
 <div align="center">
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" alt="Handshake" width="25" height="25" /> Contato
+## 🤝 Contato
 
 <br>
 
