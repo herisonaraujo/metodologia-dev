@@ -2,118 +2,38 @@
 
 <br>
 
-# ⚙️ Metodologia de Desenvolvimento
+# O Problema Que Ninguem Quer Admitir
 
 <br>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a192f,100:1a365d&height=120&section=header&text=&fontSize=0" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a192f,100:1a365d&height=100&section=header&text=&fontSize=0" width="100%"/>
 
 <br>
 
-### Arquitetura • Processo • Entrega
+### A industria de software esta quebrada. E todo mundo finge que nao.
 
 <br>
 
-<p align="center">
-  <a href="#arquitetura">
-    <img src="https://img.shields.io/badge/ARQUITETURA-0a192f?style=for-the-badge&logoColor=white" alt="Arquitetura"/>
-  </a>
-  <a href="#processo">
-    <img src="https://img.shields.io/badge/PROCESSO-1a365d?style=for-the-badge&logoColor=white" alt="Processo"/>
-  </a>
-  <a href="#stack">
-    <img src="https://img.shields.io/badge/STACK-d4af37?style=for-the-badge&logoColor=black" alt="Stack"/>
-  </a>
-  <a href="#projetos">
-    <img src="https://img.shields.io/badge/PROJETOS-00875f?style=for-the-badge&logoColor=white" alt="Projetos"/>
-  </a>
-</p>
-
-<br>
-
-<table>
-<tr>
-<td>
-
-```
- Problema identificado
-        ↓
- Arquitetura desenhada
-        ↓
- Codigo em producao
-```
-
-</td>
-</tr>
-</table>
-
-<br>
-
-<p>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React"/>
-  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js"/>
-  <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white" alt="NestJS"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
-  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare"/>
-</p>
-
-<br>
+</div>
 
 ---
 
-</div>
-
 <br>
 
-## 🏛️ Arquitetura
+## A Verdade Incomoda
 
-<a name="arquitetura"></a>
+Voce ja reparou que:
 
-> O desenho precede o codigo. Sempre.
+- **Consultorias** cobram fortunas pra entregar PowerPoints
+- **Agencias** vendem "transformacao digital" que nunca sai do papel
+- **Devs seniors** ficam 3 meses em "onboarding" antes de commitar uma linha
+- **Squads ageis** tem reuniao de planning pra decidir quando vai ser a proxima reuniao
 
-Cada projeto comeca com a definicao clara das camadas, responsabilidades e fluxos de dados. Isso elimina retrabalho e garante escalabilidade desde o dia zero.
+E no final, **ninguem entrega nada**.
 
-<br>
+O cliente paga. O projeto atrasa. O sistema nunca vai pro ar. E todo mundo acha normal.
 
-<div align="center">
-  <img src="./architecture/01-arquitetura.svg" alt="Arquitetura do Sistema" width="720"/>
-</div>
-
-<br>
-
-<table>
-<thead>
-<tr>
-<th width="25%">Camada</th>
-<th width="35%">Responsabilidade</th>
-<th width="40%">Tecnologias</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Cliente</strong></td>
-<td>Interface, UX, Responsividade</td>
-<td><code>Next.js</code> <code>React</code> <code>Tailwind</code></td>
-</tr>
-<tr>
-<td><strong>Servidor</strong></td>
-<td>Logica de Negocio, APIs, Auth</td>
-<td><code>NestJS</code> <code>Node.js</code> <code>TypeScript</code></td>
-</tr>
-<tr>
-<td><strong>Dados</strong></td>
-<td>Persistencia, Cache, Queries</td>
-<td><code>PostgreSQL</code> <code>Redis</code> <code>Prisma</code></td>
-</tr>
-<tr>
-<td><strong>Infra</strong></td>
-<td>Deploy, Seguranca, CDN</td>
-<td><code>Docker</code> <code>VPS</code> <code>Cloudflare</code></td>
-</tr>
-</tbody>
-</table>
+**Eu nao acho.**
 
 <br>
 
@@ -121,72 +41,24 @@ Cada projeto comeca com a definicao clara das camadas, responsabilidades e fluxo
 
 <br>
 
-## 🚀 Processo
+## Minha Abordagem e Simples (Por Isso Funciona)
 
-<a name="processo"></a>
+```
+Semana 1: Sistema no ar
+Semana 2: Usuarios testando
+Semana 3: Ajustes em producao
+Semana 4: Proxima feature
 
-> Ciclo continuo orientado a producao.
+Nao tem misterio. Tem trabalho.
+```
 
-Cada iteracao resulta em software funcionando. Nao existe "quase pronto". Existe no ar ou nao existe.
+Enquanto sua consultoria ainda esta "mapeando requisitos", eu ja coloquei o MVP pra rodar.
 
 <br>
 
 <div align="center">
-  <img src="./architecture/02-ciclo-entrega.svg" alt="Ciclo de Entrega" width="600"/>
+  <img src="./architecture/03-comparacao.svg" alt="Comparacao" width="700"/>
 </div>
-
-<br>
-
-<div align="center">
-
-| Design | Build | Test | Deploy | Monitor |
-|:------:|:-----:|:----:|:------:|:-------:|
-| Wireframes | Codigo | Unitarios | Container | Logs |
-| Prototipos | Review | Integracao | Producao | Metricas |
-| UI/UX | Refactor | E2E | SSL/CDN | Alertas |
-
-</div>
-
-<br>
-
-### Diferencial na Abordagem
-
-<div align="center">
-  <img src="./architecture/03-comparacao.svg" alt="Comparacao" width="650"/>
-</div>
-
-<br>
-
-<table>
-<tr>
-<td width="50%">
-
-**Consultoria Tradicional**
-```
-Semana 1   → Diagnostico
-Semana 2   → Proposta
-Semana 3   → Revisao
-Semana 4   → Contrato
-Semana 5-12→ "Desenvolvimento"
-Semana 13+ → Ajustes infinitos
-```
-
-</td>
-<td width="50%">
-
-**Entrega Direta**
-```
-Semana 1 → Sistema no ar
-Semana 2 → Usuarios testando
-Semana 3 → Ajustes em producao
-Semana 4 → Segunda feature
-
-✓ Problema resolvido
-```
-
-</td>
-</tr>
-</table>
 
 <br>
 
@@ -194,18 +66,90 @@ Semana 4 → Segunda feature
 
 <br>
 
-## 🛠️ Stack
+## Por Que Isso e Polemico?
 
-<a name="stack"></a>
+Porque desafia o modelo de negocio de muita gente.
 
-> Type-safe de ponta a ponta.
+**Consultorias precisam que projetos demorem.** Elas cobram por hora/mes.
 
-Stack moderna otimizada para produtividade, manutencao e performance em escala.
+**Agencias precisam de escopo infinito.** Mais escopo = mais faturamento.
+
+**Muitos devs precisam de estrutura.** Tech lead, PM, PO, Scrum Master... pra entregar um CRUD.
+
+Eu nao preciso de nada disso pra entregar.
+
+E isso incomoda.
+
+<br>
+
+---
+
+<br>
+
+## O Que Eu Realmente Entrego
+
+Nao vendo "consultoria". Nao vendo "horas de desenvolvimento". Nao vendo "transformacao digital".
+
+**Vendo sistema funcionando.**
 
 <br>
 
 <div align="center">
-  <img src="./architecture/04-stack.svg" alt="Stack Tecnologica" width="720"/>
+  <img src="./architecture/06-entrega.svg" alt="Entrega" width="680"/>
+</div>
+
+<br>
+
+```
+O QUE TA INCLUSO:
+
+[x] Codigo em producao (nao no seu localhost)
+[x] Servidor configurado (nao "voce se vira")
+[x] Dominio + SSL + Email (nao "isso e com TI")
+[x] Documentacao (nao "ta na minha cabeca")
+[x] Treinamento (nao "e intuitivo")
+
+Voce recebe chave na mao. Nao recebe problema.
+```
+
+<br>
+
+---
+
+<br>
+
+## A Arquitetura (Antes do Codigo)
+
+90% dos projetos que dao errado comecaram sem desenho.
+
+Dev pulou direto pro codigo. Cliente pediu "so mais uma coisinha". Sistema virou Frankenstein. Ninguem entende mais nada.
+
+**Eu desenho antes.**
+
+<br>
+
+<div align="center">
+  <img src="./architecture/01-arquitetura.svg" alt="Arquitetura" width="720"/>
+</div>
+
+<br>
+
+Cada decisao tecnica tem justificativa. Cada camada tem responsabilidade clara. Quando o cliente pede mudanca, eu sei exatamente onde mexer.
+
+<br>
+
+---
+
+<br>
+
+## Stack (Sem Mimimi)
+
+Nao uso tecnologia pra impressionar. Uso o que resolve.
+
+<br>
+
+<div align="center">
+  <img src="./architecture/04-stack.svg" alt="Stack" width="720"/>
 </div>
 
 <br>
@@ -213,48 +157,77 @@ Stack moderna otimizada para produtividade, manutencao e performance em escala.
 <table>
 <tr>
 <td align="center" width="25%">
-<br>
-<img src="https://skillicons.dev/icons?i=react,nextjs,ts,tailwind" /><br><br>
+<img src="https://skillicons.dev/icons?i=react,nextjs,ts,tailwind" /><br>
 <strong>Frontend</strong><br>
-<sub>React • Next.js • TypeScript • Tailwind</sub>
-<br><br>
+<sub>O que o usuario ve</sub>
 </td>
 <td align="center" width="25%">
-<br>
-<img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,graphql" /><br><br>
+<img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,graphql" /><br>
 <strong>Backend</strong><br>
-<sub>Node.js • NestJS • Express • GraphQL</sub>
-<br><br>
+<sub>O que faz funcionar</sub>
 </td>
 <td align="center" width="25%">
-<br>
-<img src="https://skillicons.dev/icons?i=postgres,mongodb,redis,prisma" /><br><br>
+<img src="https://skillicons.dev/icons?i=postgres,mongodb,redis,prisma" /><br>
 <strong>Database</strong><br>
-<sub>PostgreSQL • MongoDB • Redis • Prisma</sub>
-<br><br>
+<sub>Onde guarda</sub>
 </td>
 <td align="center" width="25%">
-<br>
-<img src="https://skillicons.dev/icons?i=docker,aws,cloudflare,nginx" /><br><br>
+<img src="https://skillicons.dev/icons?i=docker,aws,cloudflare,nginx" /><br>
 <strong>Infra</strong><br>
-<sub>Docker • AWS • Cloudflare • Nginx</sub>
-<br><br>
+<sub>Onde roda</sub>
 </td>
 </tr>
 </table>
 
 <br>
 
-### Integracoes Especializadas
+**TypeScript em tudo.** Porque debugar erro de tipo em producao as 2h da manha nao e minha ideia de diversao.
+
+<br>
+
+---
+
+<br>
+
+## Projetos Reais (Nao Projetos de Curso)
+
+Facil falar. Dificil mostrar.
+
+<br>
 
 <div align="center">
+  <img src="./architecture/05-projetos.svg" alt="Projetos" width="680"/>
+</div>
 
-| <img src="https://img.shields.io/badge/AI-000?style=flat-square"/> AI & LLMs | <img src="https://img.shields.io/badge/PAY-000?style=flat-square"/> Pagamentos | <img src="https://img.shields.io/badge/COM-000?style=flat-square"/> Comunicacao |
-|:---:|:---:|:---:|
-| OpenAI API | PIX Integration | WhatsApp API |
-| Claude API | Banking APIs | Email Transacional |
-| AI Agents | Payment Gateways | SMS Gateway |
+<br>
 
+| Projeto | O Que E | O Que Tem | Prova |
+|---------|---------|-----------|-------|
+| **prophetique.com.br** | Consultoria Tech | SEO 100, Performance A+ | <a href="https://prophetique.com.br"><img src="https://img.shields.io/badge/→_Acessar-00875f?style=flat-square"/></a> |
+| **bemficamarchado.com** | Export Internacional | 8 idiomas, RTL, Multi-moeda | <a href="https://bemficamarchado.com"><img src="https://img.shields.io/badge/→_Acessar-00875f?style=flat-square"/></a> |
+| **reflorestamentobrasil.com.br** | E-commerce Ambiental | WhatsApp API, Orcamentos | <a href="https://reflorestamentobrasil.com.br"><img src="https://img.shields.io/badge/→_Acessar-00875f?style=flat-square"/></a> |
+| **Enterprise** | Fintech & ERP | PIX, Banking APIs | <img src="https://img.shields.io/badge/Privado-1a365d?style=flat-square"/> |
+
+<br>
+
+Clica. Ve. Testa no celular. Abre o DevTools. Roda o Lighthouse.
+
+**Se nao ta no ar, nao existe.**
+
+<br>
+
+---
+
+<br>
+
+## O Fluxo Completo
+
+Do "tenho uma ideia" ate "ta funcionando":
+
+<br>
+
+<div align="center">
+  <img src="./architecture/07-fluxo-entrega-real.svg" alt="Fluxo" width="800"/>
 </div>
 
 <br>
@@ -263,40 +236,18 @@ Stack moderna otimizada para produtividade, manutencao e performance em escala.
 
 <br>
 
-## 📦 Entrega
+## Quanto Tempo?
 
-> Nao entrego codigo. Entrego solucao funcionando.
+| Tipo | Prazo Real | Inclui |
+|:-----|:----------:|:-------|
+| **Landing Page** | 1 semana | Design, codigo, deploy, dominio |
+| **Sistema Web** | 2-4 semanas | Full-stack, auth, API, infra |
+| **E-commerce** | 3-5 semanas | Catalogo, pagamento, admin |
+| **MVP SaaS** | 4-6 semanas | Multi-tenant, billing, dashboard |
 
-<br>
+Sim, e rapido. Nao, nao e gambiarra.
 
-<div align="center">
-  <img src="./architecture/06-entrega.svg" alt="Entrega Completa" width="650"/>
-</div>
-
-<br>
-
-<div align="center">
-
-```
-┌─────────────────┬─────────────────┬─────────────────┬─────────────────┐
-│     CODIGO      │      INFRA      │    OPERACAO     │      DOCS       │
-├─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-│ ✓ Frontend      │ ✓ Servidor VPS  │ ✓ Dominio       │ ✓ README        │
-│ ✓ Backend       │ ✓ Docker        │ ✓ Email Corp.   │ ✓ API Docs      │
-│ ✓ Database      │ ✓ SSL/HTTPS     │ ✓ Backups       │ ✓ Deploy Guide  │
-│ ✓ Testes        │ ✓ CDN           │ ✓ Monitor 24/7  │ ✓ Arquitetura   │
-└─────────────────┴─────────────────┴─────────────────┴─────────────────┘
-```
-
-</div>
-
-<br>
-
-### Fluxo Completo
-
-<div align="center">
-  <img src="./architecture/07-fluxo-entrega-real.svg" alt="Fluxo de Entrega Real" width="800"/>
-</div>
+**E foco.**
 
 <br>
 
@@ -304,71 +255,17 @@ Stack moderna otimizada para produtividade, manutencao e performance em escala.
 
 <br>
 
-## 🏆 Projetos
+## A Pergunta Que Ninguem Faz
 
-<a name="projetos"></a>
+> "Por que contratar uma pessoa se posso contratar uma equipe?"
 
-> Cases reais. Sistemas ativos. Usuarios de verdade.
+Porque equipe nao garante entrega. **Responsabilidade garante.**
 
-<br>
+Quando e uma pessoa, nao tem "o backend ta esperando o frontend" ou "a gente ta bloqueado pelo DevOps". Tem uma pessoa que resolve tudo, de ponta a ponta.
 
-<div align="center">
-  <img src="./architecture/05-projetos.svg" alt="Projetos em Producao" width="650"/>
-</div>
+E se der merda, voce sabe exatamente quem cobrar.
 
-<br>
-
-<table>
-<thead>
-<tr>
-<th>Projeto</th>
-<th>Tipo</th>
-<th>Destaques</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://prophetique.com.br"><strong>prophetique.com.br</strong></a></td>
-<td>Consultoria Tech</td>
-<td><code>SEO 100/100</code> <code>Performance</code></td>
-<td><a href="https://prophetique.com.br" target="_blank"><img src="https://img.shields.io/badge/●_Visitar-Online-00875f?style=flat-square&labelColor=0a192f"/></a></td>
-</tr>
-<tr>
-<td><a href="https://bemficamarchado.com"><strong>bemficamarchado.com</strong></a></td>
-<td>Export Internacional</td>
-<td><code>8 idiomas</code> <code>RTL</code> <code>Multi-moeda</code></td>
-<td><a href="https://bemficamarchado.com" target="_blank"><img src="https://img.shields.io/badge/●_Visitar-Online-00875f?style=flat-square&labelColor=0a192f"/></a></td>
-</tr>
-<tr>
-<td><a href="https://reflorestamentobrasil.com.br"><strong>reflorestamentobrasil.com.br</strong></a></td>
-<td>E-commerce Ambiental</td>
-<td><code>WhatsApp API</code> <code>Orcamentos</code></td>
-<td><a href="https://reflorestamentobrasil.com.br" target="_blank"><img src="https://img.shields.io/badge/●_Visitar-Online-00875f?style=flat-square&labelColor=0a192f"/></a></td>
-</tr>
-<tr>
-<td><strong>Enterprise Systems</strong></td>
-<td>Fintech & ERP</td>
-<td><code>PIX</code> <code>Banking</code> <code>Microservices</code></td>
-<td><img src="https://img.shields.io/badge/●-Privado-1a365d?style=flat-square&labelColor=0a192f"/></td>
-</tr>
-</tbody>
-</table>
-
-<br>
-
-### Tempo Medio de Entrega
-
-<div align="center">
-
-| Tipo | Prazo | O que inclui |
-|:-----|:-----:|:-------------|
-| **Landing Page** | 1 semana | Design, codigo, deploy, dominio, SSL |
-| **Sistema Web** | 2-4 semanas | Full-stack, auth, API, infra completa |
-| **E-commerce** | 3-5 semanas | Catalogo, carrinho, pagamento, admin |
-| **SaaS MVP** | 4-6 semanas | Multi-tenant, billing, dashboard |
-
-</div>
+**Accountability.**
 
 <br>
 
@@ -376,32 +273,23 @@ Stack moderna otimizada para produtividade, manutencao e performance em escala.
 
 <br>
 
-## 📂 Estrutura
+## Isso Nao e Pra Todo Mundo
 
-```
-metodologia-dev/
-│
-├── README.md                 # Visao geral da metodologia
-├── LICENSE                   # MIT License
-│
-├── architecture/             # Diagramas de arquitetura
-│   ├── 01-arquitetura.svg
-│   ├── 02-ciclo-entrega.svg
-│   ├── 03-comparacao.svg
-│   ├── 04-stack.svg
-│   ├── 05-projetos.svg
-│   ├── 06-entrega.svg
-│   └── 07-fluxo-entrega-real.svg
-│
-├── docs/                     # Documentacao tecnica
-│   ├── ARCHITECTURE.md       # Principios e patterns
-│   ├── STACK.md              # Detalhamento da stack
-│   └── DEPLOYMENT.md         # Guia de deploy
-│
-└── templates/                # Templates reutilizaveis
-    ├── project-structure.md  # Estrutura padrao de projeto
-    └── api-documentation.md  # Template de API docs
-```
+Se voce quer:
+- Reunioes semanais de status
+- Sprints com 47 story points
+- Um PM pra traduzir o que o dev falou
+- Alguem pra culpar quando der errado
+
+**Eu nao sou a pessoa certa.**
+
+Agora, se voce quer:
+- Sistema funcionando rapido
+- Uma pessoa que entende e resolve
+- Comunicacao direta sem intermediario
+- Resultado, nao processo
+
+**Ai a gente conversa.**
 
 <br>
 
@@ -411,13 +299,13 @@ metodologia-dev/
 
 <div align="center">
 
-## 🤝 Contato
+## Contato
 
 <br>
 
-**Herison da Costa Araujo**
+**Herison Araujo**
 
-Full-Stack Developer
+Dev que entrega
 
 <br>
 
@@ -455,7 +343,7 @@ Full-Stack Developer
 
 <br>
 
-*"Arquitetura primeiro, codigo depois. Excelencia em cada entrega."*
+*"Menos reuniao, mais deploy."*
 
 <br>
 
