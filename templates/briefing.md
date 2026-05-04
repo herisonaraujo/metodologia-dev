@@ -1,367 +1,233 @@
-# Template: API Documentation
+# Briefing de Projeto
 
-## Base URL
+Este template serve para organizar o contexto inicial de um projeto antes de iniciar arquitetura, desenvolvimento, automações ou agentes de IA.
 
-```
-Production: https://api.example.com/v1
-Staging:    https://staging-api.example.com/v1
-Local:      http://localhost:3000/api/v1
+O objetivo é transformar uma ideia solta em informações claras, priorizadas e acionáveis.
+
+---
+
+## 1. Contexto
+
+Descreva o problema, cenário atual e motivo do projeto.
+
+**Perguntas de apoio:**
+
+- Qual problema precisa ser resolvido?
+- O que acontece hoje?
+- Quem sente essa dor?
+- Por que isso precisa ser resolvido agora?
+- O que já foi tentado antes?
+
+**Resposta:**
+
+```md
+Escreva aqui o contexto do projeto.
 ```
 
 ---
 
-## Authentication
+## 2. Objetivo
 
-### Headers
+Qual resultado o projeto precisa gerar?
 
-```
-Authorization: Bearer <access_token>
-Content-Type: application/json
-```
+**Perguntas de apoio:**
 
-### Login
+- O que precisa melhorar?
+- Qual entrega é esperada?
+- Qual impacto o projeto deve causar?
+- Como saberemos que valeu a pena?
 
-```http
-POST /auth/login
-```
+**Resposta:**
 
-**Request:**
-```json
-{
-  "email": "user@example.com",
-  "password": "securepassword"
-}
-```
-
-**Response (200):**
-```json
-{
-  "success": true,
-  "data": {
-    "accessToken": "eyJhbGciOiJIUzI1NiIs...",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIs...",
-    "user": {
-      "id": "uuid",
-      "email": "user@example.com",
-      "name": "User Name"
-    }
-  }
-}
-```
-
-### Refresh Token
-
-```http
-POST /auth/refresh
-```
-
-**Request:**
-```json
-{
-  "refreshToken": "eyJhbGciOiJIUzI1NiIs..."
-}
+```md
+Escreva aqui o objetivo do projeto.
 ```
 
 ---
 
-## Response Format
+## 3. Usuários
 
-### Success
+Quem usa a solução?
 
-```json
-{
-  "success": true,
-  "data": { ... },
-  "meta": {
-    "page": 1,
-    "limit": 20,
-    "total": 150,
-    "totalPages": 8
-  }
-}
-```
+- Cliente final:
+- Operação interna:
+- Administrador:
+- Gestor:
+- Equipe técnica:
+- Outros:
 
-### Error
+**Observações sobre os usuários:**
 
-```json
-{
-  "success": false,
-  "error": {
-    "code": "ERROR_CODE",
-    "message": "Human readable message",
-    "details": [
-      {
-        "field": "email",
-        "message": "Email is required"
-      }
-    ]
-  }
-}
-```
-
-### Error Codes
-
-| Code | HTTP Status | Description |
-|------|-------------|-------------|
-| `VALIDATION_ERROR` | 400 | Input validation failed |
-| `UNAUTHORIZED` | 401 | Authentication required |
-| `FORBIDDEN` | 403 | Permission denied |
-| `NOT_FOUND` | 404 | Resource not found |
-| `CONFLICT` | 409 | Resource already exists |
-| `RATE_LIMITED` | 429 | Too many requests |
-| `INTERNAL_ERROR` | 500 | Server error |
-
----
-
-## Endpoints
-
-### Users
-
-#### List Users
-
-```http
-GET /users
-```
-
-**Query Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| page | number | 1 | Page number |
-| limit | number | 20 | Items per page (max: 100) |
-| search | string | - | Search by name or email |
-| sort | string | createdAt | Sort field |
-| order | string | desc | Sort order (asc/desc) |
-
-**Response (200):**
-```json
-{
-  "success": true,
-  "data": [
-    {
-      "id": "uuid",
-      "email": "user@example.com",
-      "name": "User Name",
-      "createdAt": "2024-01-15T10:30:00Z"
-    }
-  ],
-  "meta": {
-    "page": 1,
-    "limit": 20,
-    "total": 150
-  }
-}
-```
-
-#### Get User
-
-```http
-GET /users/:id
-```
-
-**Response (200):**
-```json
-{
-  "success": true,
-  "data": {
-    "id": "uuid",
-    "email": "user@example.com",
-    "name": "User Name",
-    "role": "user",
-    "createdAt": "2024-01-15T10:30:00Z",
-    "updatedAt": "2024-01-20T14:00:00Z"
-  }
-}
-```
-
-#### Create User
-
-```http
-POST /users
-```
-
-**Request:**
-```json
-{
-  "email": "newuser@example.com",
-  "name": "New User",
-  "password": "securepassword"
-}
-```
-
-**Validation:**
-- `email`: Required, valid email, unique
-- `name`: Required, 2-100 characters
-- `password`: Required, min 8 characters
-
-**Response (201):**
-```json
-{
-  "success": true,
-  "data": {
-    "id": "uuid",
-    "email": "newuser@example.com",
-    "name": "New User",
-    "createdAt": "2024-01-15T10:30:00Z"
-  }
-}
-```
-
-#### Update User
-
-```http
-PATCH /users/:id
-```
-
-**Request:**
-```json
-{
-  "name": "Updated Name"
-}
-```
-
-**Response (200):**
-```json
-{
-  "success": true,
-  "data": {
-    "id": "uuid",
-    "email": "user@example.com",
-    "name": "Updated Name",
-    "updatedAt": "2024-01-20T14:00:00Z"
-  }
-}
-```
-
-#### Delete User
-
-```http
-DELETE /users/:id
-```
-
-**Response (204):** No content
-
----
-
-### Health Check
-
-```http
-GET /health
-```
-
-**Response (200):**
-```json
-{
-  "status": "healthy",
-  "timestamp": "2024-01-15T10:30:00Z",
-  "version": "1.0.0",
-  "services": {
-    "database": true,
-    "cache": true
-  }
-}
+```md
+Descreva necessidades, dores ou responsabilidades de cada perfil de usuário.
 ```
 
 ---
 
-## Rate Limiting
+## 4. Fluxo principal
 
-| Endpoint | Limit | Window |
-|----------|-------|--------|
-| `/auth/*` | 10 | 1 minute |
-| `/api/*` | 100 | 1 minute |
-| `/api/upload` | 10 | 1 hour |
+Descreva o caminho principal de uso.
 
-**Headers:**
-```
-X-RateLimit-Limit: 100
-X-RateLimit-Remaining: 95
-X-RateLimit-Reset: 1705312200
+```md
+1.
+2.
+3.
+4.
+5.
 ```
 
----
+**Exemplo:**
 
-## Webhooks
-
-### Event Types
-
-| Event | Description |
-|-------|-------------|
-| `user.created` | New user registered |
-| `user.updated` | User profile updated |
-| `order.created` | New order placed |
-| `payment.completed` | Payment processed |
-
-### Payload
-
-```json
-{
-  "id": "webhook-uuid",
-  "type": "user.created",
-  "timestamp": "2024-01-15T10:30:00Z",
-  "data": {
-    "id": "user-uuid",
-    "email": "user@example.com"
-  }
-}
-```
-
-### Signature Verification
-
-```typescript
-import crypto from 'crypto';
-
-function verifyWebhook(payload: string, signature: string, secret: string): boolean {
-  const expected = crypto
-    .createHmac('sha256', secret)
-    .update(payload)
-    .digest('hex');
-
-  return crypto.timingSafeEqual(
-    Buffer.from(signature),
-    Buffer.from(expected)
-  );
-}
+```md
+1. Cliente acessa o site.
+2. Escolhe um produto ou serviço.
+3. Realiza pedido ou solicitação.
+4. Operação acompanha pelo painel.
+5. Sistema atualiza status e registra informações.
 ```
 
 ---
 
-## SDK Usage
+## 5. Regras importantes
 
-### TypeScript/JavaScript
+Liste regras de negócio, decisões operacionais e condições que precisam ser respeitadas.
 
-```typescript
-import { ApiClient } from '@example/sdk';
+```md
+- Regra 1:
+- Regra 2:
+- Regra 3:
+- Regra 4:
+```
 
-const client = new ApiClient({
-  baseUrl: 'https://api.example.com/v1',
-  apiKey: 'your-api-key',
-});
+**Perguntas de apoio:**
 
-// List users
-const users = await client.users.list({ page: 1, limit: 20 });
+- Quem pode ver ou editar cada informação?
+- Quais status existem?
+- O que acontece em caso de erro?
+- Existe aprovação manual?
+- Existe limite de horário, estoque, pagamento ou permissão?
 
-// Get user
-const user = await client.users.get('user-uuid');
+---
 
-// Create user
-const newUser = await client.users.create({
-  email: 'new@example.com',
-  name: 'New User',
-  password: 'secure123',
-});
+## 6. Integrações necessárias
+
+Marque e descreva as integrações previstas.
+
+```md
+- Pagamento:
+- E-mail:
+- Mapa:
+- API externa:
+- Automação:
+- IA:
+- Banco de dados:
+- Notificações:
+- Outros:
+```
+
+**Detalhes técnicos conhecidos:**
+
+```md
+Descreva endpoints, ferramentas, provedores, tokens, ambientes ou dependências conhecidas.
 ```
 
 ---
 
-## Changelog
+## 7. Restrições
 
-### v1.1.0 (2024-02-01)
-- Added webhook support
-- New `/users/search` endpoint
-- Improved rate limiting
+Liste limitações, riscos e cuidados importantes.
 
-### v1.0.0 (2024-01-15)
-- Initial release
-- Authentication endpoints
-- User CRUD operations
+```md
+- Prazo:
+- Orçamento:
+- Tecnologia:
+- Legal/LGPD:
+- Operação:
+- Segurança:
+- Equipe:
+- Dependências externas:
+```
+
+**Observações:**
+
+```md
+Escreva aqui qualquer restrição que possa afetar escopo, prazo, custo ou qualidade.
+```
+
+---
+
+## 8. Primeira entrega funcional
+
+O que precisa estar funcionando no MVP?
+
+```md
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+```
+
+**Critério para considerar o MVP utilizável:**
+
+```md
+Descreva o mínimo necessário para que a solução já gere valor real.
+```
+
+---
+
+## 9. Critério de sucesso
+
+Como saberemos que a entrega funcionou?
+
+```md
+- Critério 1:
+- Critério 2:
+- Critério 3:
+```
+
+**Indicadores possíveis:**
+
+- Redução de retrabalho.
+- Maior clareza operacional.
+- Menos tempo em tarefas manuais.
+- Aumento de conversão.
+- Melhor controle de dados.
+- Melhor acompanhamento de pedidos, demandas ou processos.
+- Uso real pela operação.
+
+---
+
+## 10. Riscos e dúvidas abertas
+
+Liste pontos que ainda precisam ser validados.
+
+```md
+- [ ] 
+- [ ] 
+- [ ] 
+```
+
+---
+
+## 11. Próximos passos
+
+```md
+1.
+2.
+3.
+```
+
+---
+
+## Resumo executivo
+
+Preencha ao final, depois de organizar as informações acima.
+
+```md
+O projeto tem como objetivo [objetivo principal], resolvendo [problema] para [usuários principais].
+
+A primeira entrega funcional deve contemplar [principais entregas], respeitando [restrições principais] e considerando integrações com [integrações].
+
+O sucesso será medido por [critérios de sucesso].
+```
