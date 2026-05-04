@@ -79,26 +79,6 @@ flowchart LR
 
 ---
 
-## Documentação complementar
-
-| Documento | Finalidade |
-|---|---|
-| [Arquitetura da metodologia](./docs/architecture.md) | Explica como estruturo soluções digitais operáveis |
-| [Agentes de IA e contexto operacional](./docs/ai-agents.md) | Mostra como uso IA com contexto, regras e limites |
-| [Plataformas de delivery e e-commerce](./docs/delivery-platforms.md) | Demonstra aplicação prática em produtos comerciais |
-| [Playbook operacional](./docs/operations-playbook.md) | Organiza a operação antes e depois do deploy |
-| [Governança, LGPD e informação sensível](./docs/governance-lgpd.md) | Define cuidados básicos com dados e uso de IA |
-
-## Templates práticos
-
-| Template | Uso |
-|---|---|
-| [Briefing de projeto](./templates/briefing.md) | Início de projeto e levantamento de contexto |
-| [Regras de negócio](./templates/business-rules.md) | Organização das decisões operacionais |
-| [Contexto para agente de IA](./templates/agent-context.md) | Estruturação de agentes especialistas |
-| [Checklist de entrega](./templates/delivery-checklist.md) | Validação antes, durante e depois do deploy |
-| [Handoff técnico e operacional](./templates/handoff.md) | Passagem de conhecimento e continuidade |
-
 <details open>
 <summary><strong>1. Contexto e objetivo</strong></summary>
 
@@ -181,6 +161,26 @@ Depois da entrega, o sistema precisa evoluir:
 * Evolução incremental.
 
 </details>
+
+## Documentação complementar
+
+| Documento | Finalidade |
+|---|---|
+| [Arquitetura da metodologia](./docs/architecture.md) | Explica como estruturo soluções digitais operáveis |
+| [Agentes de IA e contexto operacional](./docs/ai-agents.md) | Mostra como uso IA com contexto, regras e limites |
+| [Plataformas de delivery e e-commerce](./docs/delivery-platforms.md) | Demonstra aplicação prática em produtos comerciais |
+| [Playbook operacional](./docs/operations-playbook.md) | Organiza a operação antes e depois do deploy |
+| [Governança, LGPD e informação sensível](./docs/governance-lgpd.md) | Define cuidados básicos com dados e uso de IA |
+
+## Templates práticos
+
+| Template | Uso |
+|---|---|
+| [Briefing de projeto](./templates/briefing.md) | Início de projeto e levantamento de contexto |
+| [Regras de negócio](./templates/business-rules.md) | Organização das decisões operacionais |
+| [Contexto para agente de IA](./templates/agent-context.md) | Estruturação de agentes especialistas |
+| [Checklist de entrega](./templates/delivery-checklist.md) | Validação antes, durante e depois do deploy |
+| [Handoff técnico e operacional](./templates/handoff.md) | Passagem de conhecimento e continuidade |
 
 ---
 
