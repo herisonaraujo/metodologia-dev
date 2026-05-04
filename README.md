@@ -77,8 +77,6 @@ flowchart LR
 
 ## O método em 6 camadas
 
----
-
 <details open>
 <summary><strong>1. Contexto e objetivo</strong></summary>
 
